@@ -1,0 +1,39 @@
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Company Admin</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+</head>
+<body class="auth-page">
+
+    <div class="auth-card text-center">
+        <span class="auth-logo-badge">EMS</span>
+        <h3>Create Account</h3>
+        <p class="text-muted small mb-4">Register as a company administrator</p>
+
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="text-start">
+                {{ form.as_p }}
+            </div>
+
+            <button type="submit" class="btn-auth">Register Now</button>
+        </form>
+
+        <div class="mt-4">
+            <p class="small text-muted">Already have an account? 
+                <a href="{% url 'login' %}" class="text-primary fw-bold text-decoration-none">Login</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html> {% endcomment %}

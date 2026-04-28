@@ -1,0 +1,137 @@
+:root {
+    --nav-blue: #2563eb;
+    --nav-text: #ffffff;
+    --nav-active: #93c5fd;
+    --body-bg: #f9fafb;
+    --body-text: #111827;
+    --sub-text: #6b7280;
+    --card-border: #e5e7eb;
+    --footer-bg: #111827;
+    --footer-text: #9ca3af;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Navbar */
+.navbar { background-color: #1E40AF; padding: 0.8rem 0; }
+.navbar-brand, .nav-link { color: white !important; font-weight: 600; }
+.brand-sq { background: white; color: var(--nav-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-weight: 800; }
+.btn-pill { border-radius: 50px; font-size: 0.75rem; padding: 5px 18px !important; font-weight: 700; }
+
+/* Small Cards */
+.dash-card { 
+    border-radius: 12px !important; 
+    border: 1px solid var(--card-border) !important;
+    max-width: 320px; 
+    margin: 0 auto;
+}
+.dash-card h5 { font-size: 1.1rem; }
+
+/* Total Count Bar */
+.total-count-bar {
+    background: white;
+    border: 1px solid var(--card-border);
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.fw-800 { font-weight: 800; }
+.count-label { text-wrap-style: uppercase; font-weight: 700; color: var(--sub-text); font-size: 0.65rem; letter-spacing: 0.5px; }
+.border-end { border-color: var(--card-border) !important; }
+
+/* Footer & Copyright Strip */
+
+
+/* --- LARGE TWO-PART FOOTER --- */
+.footer-custom {
+    background-color: #111827;
+    padding: 3.5rem 0 2rem 0; /* More padding on top, less on bottom */
+    border-top: 2px solid #374151;
+    margin-top: auto;
+}
+
+/* Top Row: Brand and Nav */
+.footer-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 2.5rem; /* Space between rows */
+    flex-wrap: wrap;
+}
+
+/* Bottom Row: Copyright Down */
+.footer-bottom-row {
+    border-top: 1px solid #374151;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.footer-brand-section, .footer-nav-section {
+    display: flex;
+    align-items: center;
+}
+
+.developed-by-label {
+    color: #9ca3af;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-right: 12px;
+}
+
+.footer-brand-name {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.ph-logo-footer-md {
+    background: #2563eb;
+    color: white;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.footer-divider {
+    color: #4b5563;
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+.footer-link {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 12px;
+    transition: 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.copyright-text-large {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive: stack if narrow */
+@media (max-width: 1100px) {
+    .footer-divider { display: none; }
+    .footer-top-row { flex-direction: column; gap: 25px; }
+}
